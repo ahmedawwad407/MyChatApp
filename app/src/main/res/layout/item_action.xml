@@ -1,0 +1,42 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="message"
+            type="com.example.mychat.Message" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingTop="@dimen/tiny_margin"
+        android:paddingStart="@dimen/small_margin"
+        android:paddingEnd="@dimen/small_margin">
+
+
+        <TextView
+            android:id="@+id/username"
+            style="?android:textAppearanceMedium"
+            android:textColor="?android:textColorPrimary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:textStyle="bold"
+            android:text="@{message.from.name}"
+            tools:text="Username" />
+
+        <TextView
+            android:id="@+id/action"
+            style="?android:textAppearanceMedium"
+            android:textColor="?android:textColorSecondary"
+            android:text="@string/user_action_typing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/tiny_margin"
+            android:paddingRight="@dimen/tiny_margin"
+            android:singleLine="true" />
+    </LinearLayout>
+</layout>
